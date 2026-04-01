@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c57754c93ae34ac3b9b716a0fd2f2149",
+    "content-hash": "e51098d8ee47e1feff457313fd0d57b2",
     "packages": [
         {
             "name": "brick/math",
@@ -3296,6 +3296,71 @@
                 "source": "https://github.com/ramsey/uuid/tree/4.9.2"
             },
             "time": "2025-12-14T04:43:48+00:00"
+        },
+        {
+            "name": "spatie/fork",
+            "version": "1.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/fork.git",
+                "reference": "83a51210fd366af3972aad119e7ab5e35ac57850"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/fork/zipball/83a51210fd366af3972aad119e7ab5e35ac57850",
+                "reference": "83a51210fd366af3972aad119e7ab5e35ac57850",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcntl": "*",
+                "ext-sockets": "*",
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nesbot/carbon": "^2.66|^3.0",
+                "pestphp/pest": "^4.0",
+                "spatie/ray": "^1.10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Fork\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brent Roose",
+                    "email": "brent@spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A lightweight solution for running code concurrently in PHP",
+            "homepage": "https://github.com/spatie/fork",
+            "keywords": [
+                "fork",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/fork/issues",
+                "source": "https://github.com/spatie/fork/tree/1.2.7"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-03-27T19:08:46+00:00"
         },
         {
             "name": "symfony/clock",
@@ -8021,5 +8086,5 @@
         "php": "^8.3"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }

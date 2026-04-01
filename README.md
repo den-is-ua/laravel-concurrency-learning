@@ -25,6 +25,24 @@ Shell inside the PHP container (from the project root):
 
 Requires containers to be running.
 
+## Console commands
+
+Custom Artisan commands for trying Laravel’s **Concurrency** facade:
+
+| Command | What it does |
+|--------|----------------|
+| `php artisan concurrency` | Runs three closures in parallel via `Concurrency::run()` (each sleeps 2s), then prints the collected results and a rough elapsed time. |
+| `php artisan concurrency:defer` | Schedules three deferred closures via `Concurrency::defer()` (each sleeps 2s and writes to the log); returns quickly while work continues in the background. |
+
+From the host with Docker:
+
+```bash
+docker compose exec app php artisan concurrency
+docker compose exec app php artisan concurrency:defer
+```
+
+Or from a shell opened with `./go-into-app`, run the same `php artisan …` lines.
+
 ## Laravel resources
 
 Official docs: [laravel.com/docs](https://laravel.com/docs).

@@ -25,6 +25,20 @@ Shell inside the PHP container (from the project root):
 
 Requires containers to be running.
 
+## HTTP routes
+
+Defined in `routes/web.php` and handled by `HomeController`:
+
+| Method | Path | Description |
+|--------|------|-------------|
+| `GET` | `/` | Runs three closures in parallel via `Concurrency::run()` (each sleeps 2s), then returns JSON with the collected results and `elapsed_seconds`. |
+| `GET` | `/defer` | Schedules three deferred closures via `Concurrency::defer()` (each sleeps 2s and logs); the HTTP response returns immediately with a message and `elapsed_seconds` while work continues in the background. |
+
+Examples (with Docker as in [Quick start](#quick-start)):
+
+- http://localhost:8080/
+- http://localhost:8080/defer
+
 ## Console commands
 
 Custom Artisan commands for trying Laravel’s **Concurrency** facade:
